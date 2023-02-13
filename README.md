@@ -1,39 +1,54 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Flutter Iterum
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Easily restart your application from scratch.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Wrap you App widget in the `Iterum` widget.
 
 ```dart
-const like = 'sample';
+void main() {
+  runApp(
+    Iterum(
+      child: App(),
+    ),
+  );
+}
 ```
 
-## Additional information
+Call the `revive` static method when you want to restart your application (rebuild the entire widget from scratch).
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+Iterum.revive(context);
+```
+>**Disclaimer :** 
+<br><br>Iterum restarts your application at the application level, rebuilding your application widget tree from scratch, losing any previous state.
+<br><br>Iterum does not fully restart your application process at the OS level.
+
+## Use cases 
+
+Here is a non-exhaustive list of use cases where `Iterum` can help :
+
+- restart the app after a logout
+- restart the app after a failed app initialization process
+- restart the app after a specific event in the app occurs
+- ...
+
+## Installation
+
+### Dependency
+Add the package as a dependency in your pubspec.yaml file.
+```yaml
+dependencies:
+  flutter_Iterum: "^1.0.0"
+```
+
+### Import
+Import the package in your code file.
+```dart
+import 'package:flutter_Iterum/flutter_Iterum.dart';
+```
+
+## License
+
+Flutter Iterum is released under the [MIT License](LICENSE)
