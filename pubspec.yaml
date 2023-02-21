@@ -1,6 +1,6 @@
 name: flutter_iterum
 description: A flutter package to easily restart your application whenever you need to
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/simphiwehlabisa/flutter_iterum
 
 environment:
